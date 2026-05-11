@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tiêu đề trang</title>
+
+     <style>
+        body{
+            margin:0;
+            font-family:"Times New Roman";
+        }
+
+        /* Khung chính */
+        .container{
+            width:95%;
+            margin:auto;
+            border:2px solid blue;
+        }
+
+        /* Logo */
+        .top{
+            height:120px;
+            border-bottom:2px solid black;
+        }
+
+        .top img{
+            width:100%;
+            height:100%;
+            object-fit:fill;
+            display:block;
+        }
+
+        /* Phần dưới */
+        .bottom{
+            display:flex;
+            height:500px;
+        }
+
+        /* Menu trái */
+        .left{
+            width:20%;
+            background:#f5f5f5;
+            border-right:2px solid black;
+            padding:10px;
+            box-sizing:border-box;
+        }
+
+        .left a{
+            display:block;
+            color:purple;
+            font-weight:bold;
+            margin-bottom:5px;
+            text-decoration:underline;
+        }
+
+        /* Nội dung */
+        .right{
+            width:80%;
+        }
+
+        .right iframe{
+            width:100%;
+            height:100%;
+            border:none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Logo -->
+    <div class="top">
+        <img src="images/LOGO.JPG">
+    </div>
+
+    <!-- Nội dung -->
+    <div class="bottom">
+
+        <!-- Menu -->
+        <div class="left">
+
+            <a href="Colorado.html" target="contentFrame">Homepage</a><br>
+
+<a href="Philosph.html" target="contentFrame">
+Our Philosophy
+</a><br>
+
+<a href="Lessons.html" target="contentFrame">
+Climbing Lessons
+</a><br>
+
+<a href="Grepon.html" target="contentFrame">
+Petit Grepon
+</a><br>
+
+<a href="Lumpy.html" target="contentFrame">
+Lumpy Ridge
+</a><br>
+
+<a href="NFace.html" target="contentFrame">
+North Face
+</a><br>
+
+<a href="Kieners.html" target="contentFrame">
+Kiener's
+</a><br>
+
+<a href="Diamond.html" target="contentFrame">
+The Diamond
+</a><br>
+
+<a href="Eldorado.html" target="contentFrame">
+Eldorado
+</a>
+
+        </div>
+
+        <!-- Nội dung iframe -->
+        <div class="right">
+            <iframe src="TCE.html" name="contentFrame"></iframe>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
