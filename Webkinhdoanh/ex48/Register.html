@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+    </head>
+    <body>
+        <form>
+    <div style=" background:#93c3f1;">
+
+       <center>
+    <img src="images/Jackson.gif" width="220" height="70">
+    
+    <h2>Registration Form</h2>
+    <small>Register your Jackson Electronics product here</small>
+</center>
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td>
+                    <input type="text" name="fname" size="10">
+                </td>
+                <td>Last Name:</td>
+                <td>
+                    <input type="text" name="lname" size="10">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Address #1:</td>
+                <td colspan="3">
+                    <input type="text" name="address1" size="30">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Address #2:</td>
+                <td colspan="3">
+                    <input type="text" name="address2" size="30">
+                </td>
+            </tr>
+
+            <tr>
+                <td>City:</td>
+                <td>
+                    <input type="text" name="city" size="15">
+                </td>
+                <td>State:</td>
+                <td>
+                    <input type="text" name="state" size="3">
+                    Zip: <input type="text" name="zip" size="5">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Country:</td>
+                <td>
+                    <input type="text" name="country" value="United States" size="15"></td>
+            </tr>
+        </table>
+        <hr/>
+        <table>
+            <tr>
+                <td>Product:</td>
+                <td>
+                    <select name="product">
+                        <option value="ScanMaster">ScanMaster</option>
+                        <option value="PrintMaster">PrintMaster</option>
+                        <option value="CopyMaster">CopyMaster</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Date Purchased:</td>
+                <td><input type="text" name="date"></td>
+            </tr>
+
+            <tr>
+                <td>Serial #:</td>
+                <td><input type="text" name="serial"></td>
+            </tr>
+
+            <tr>
+                <td>Used for:</td>
+                <td>
+                    <input type="radio" name="used" value="Home">Home
+                    <input type="radio" name="used" value="Educational Institution">Educational Institution<br>
+                    <input type="radio" name="used" value="Business" checked>Business
+                    <input type="radio" name="used" value="Other">Other<br>
+                    <input type="radio" name="used" value="Government">Government
+                </td>
+            </tr>
+            <tr>
+                <td>System<br>(check all that apply):</td>
+                <td>
+                    <input type="checkbox" name="system" value="Windows">Windows
+                    <input type="checkbox" name="system" value="UNIX">UNIX<br>
+                    <input type="checkbox" name="system" value="Macintosh">Macintosh
+                    <input type="checkbox" name="system" value="Other">Other
+                </td>
+            </tr>
+        </table>
+        <hr/>
+        Comments?
+        <input type ="text" name="comments" style="height: 100px; width: 300px;">
+        
+        <center>
+            <input type="button" value="Click to register"
+                   onclick="alert('Registration')">
+            <input type="reset" value="Click to cancel">
+        </center>
+
+    </div>
+</form>
+    </body>
+</html>
