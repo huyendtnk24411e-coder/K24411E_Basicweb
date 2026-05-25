@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+    </head>
+    <body>
+        <form style="background:#ccffff;">
+            <h3 style="color:red;">Online Classifieds Search Form</h3>
+            <hr/>
+            <b>1) Search for a classified in the following sections:</b><br>
+            <input type="radio" name="section">Employment
+            <input type="radio" name="section">Personal<br>
+            <input type="radio" name="section" checked>For Sale
+            <input type="radio" name="section">Miscellaneous<br>
+            <input type="radio" name="section">Housing
+            <input type="radio" name="section">All of the above<br>
+            <b>2) Search the following publications:</b><br>
+            <input type="checkbox" checked>Midwest times
+            <input type="checkbox">Modern News
+            <input type="checkbox">Employment Today<br>
+            <input type="checkbox" checked>Great Lakes Classifieds
+            <input type="checkbox">Middleton Daily
+            <input type="checkbox">Cashtown Daily News<br>
+            <b>3) From to</b>
+            <input type="text" value="mm/dd/yy" size="12">
+            to
+            <input type="text" value="mm/dd/yy" size="12"><br><br>
+            <b>4) Enter a few keywords to describe the classified.</b><br>
+            <input type="text" size="50"><br><br>
+            <b>5) Click one of the options below:</b><br>
+            <input type="image" src="images/Search.gif" onclick="alert('Search simulation'); return false;">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="online_form.html">
+                <img src="images/Help.gif" border="0">
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="image" src="images/Cancel.gif" onclick="this.form.reset(); return false;">
+        </form>
+    </body>
+</html>
