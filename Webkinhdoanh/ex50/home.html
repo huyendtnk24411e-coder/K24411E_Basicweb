@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <style>
+body{background-color:rgb(194, 244, 250);}
+        </style>
+  </head>
+    <body>
+        <div style="text-align: center;">
+            <img src="image/DeLong.jpg"/>
+        </div>
+        <h2>Travel Expense Report</h2>
+        <hr/>
+        <form id="travelForm">
+            <p>First name:
+                <input type="text" name="firstName" style="width:105px;">
+            Last Name:
+            <input type="text" name="lastName" style="width:105px;">
+        </p>
+        <p>Social Security Number:
+            <input type="text" name="ssn" style="width:105px;">
+        </p>
+        <p>Department
+            <select name="department">
+                <option value="accounting">Accounting</option>
+                <option value="marketing">Marketing</option>
+                <option value="engineering">Engineering</option>
+            </select>
+        </p>
+        <p>Describe the purpose of your trip:</p>
+            <textarea name="tripDescription"></textarea>
+        <p>Itemize your travel expenses:</p>
+        <table border="1" cellpadding="5" >
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td><input type="text" class="date1" value="mm/dd/yy"></td>
+                <td><input type="text" name="description1"></td>
+                <td><select name="category1">
+                    <option value="transportation">Transportation</option>
+                    <option value="lodging">Lodging</option>
+                    <option value="meals">Meals</option>
+                </select></td>
+                <td><input type="text" name="amount1"></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="date2" value="mm/dd/yy"></td>
+                <td><input type="text" name="description2"></td>
+                <td><select name="category2">
+                    <option value="transportation">Transportation</option>
+                    <option value="lodging">Lodging</option>
+                    <option value="meals">Meals</option>
+                </select></td>
+                <td><input type="text" name="amount2"></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="date3" value="mm/dd/yy"></td>
+                <td><input type="text" name="description3"></td>
+                <td><select name="category3">
+                    <option value="transportation">Transportation</option>
+                    <option value="lodging">Lodging</option>
+                    <option value="meals">Meals</option>
+                </select></td>
+                <td><input type="text" name="amount3"></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="date4" value="mm/dd/yy"></td>
+                <td><input type="text" name="description4"></td>
+                <td><select name="category4">
+                    <option value="transportation">Transportation</option>
+                    <option value="lodging">Lodging</option>
+                    <option value="meals">Meals</option>
+                </select></td>
+                <td><input type="text" name="amount4"></td>
+        </table>
+        <p>Have you submitted your receipts?
+           <input type="radio" id="yes" name="receipts" value="yes">
+           <label for="yes">Yes</label>
+           <input type="radio" id="no" name="receipts" value="no">
+           <label for="no">No</label>
+        </p>
+        <p>
+            <input type="button" class="btn" value="Submit travel expenses" onclick="submitForm()">
+            <input type="button" class="btn" value="Reset" onclick="resetForm()">
+        </p>    
+        <p>Questions? Contact Debbie Larson in Accounting (ext. 2150)</p>
+        </form>
+
+    </body>
+</html>

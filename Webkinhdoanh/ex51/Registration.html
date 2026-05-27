@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <style>
+body{background-color:rgb(37, 151, 136);
+    color:white
+}
+h1{text-align: center;
+}
+        </style>
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <img src="image/Logo.gif"/>
+        </div>
+        <h1>Newborn Registration</h1>
+        <form id="myForm">
+            <p>Date:
+            <input type="text" class="small" placeholder="mm/dd/yy">
+        </p>
+        <p>Infant's first name:
+            <input type="text" class="large">
+            Last:
+            <input type="text" class="medium">
+        </p>
+        <p>Medical Record #:
+            <input type="text" class="small">
+        </p>
+        <p>Date of birth:
+            <input type="text" class="small" placeholder="mm/dd/yy">
+        </p>
+        <p>Birth weight :
+            <input type="text" class="small">
+        </p>
+        <p>APGAR score :
+            <input type="text" class="small">
+        </p>
+        <p>Mother's first name:
+            <input type="text" class="large">
+            Last:
+            <input type="text" class="medium">
+        </p>
+        <p>Father's first name :
+            <input type="text" class="large">
+            Last:
+            <input type="text" class="medium">
+        </p>
+        <p>Physician (check all that apply):
+            <select multiple class="listbox">
+                <option>Dr. Warren Albert</option>
+                <option>Dr. Maria Alvarez</option>
+                <option>Dr. Karen Brinkman</option>
+                <option>Dr. Micheal Kerry</option>
+            </select>
+        </p>
+        <p style="text-align: center;">
+            <input type="button" class="btn" value="Register" onclick="registerForm()">
+            <input type="button" class="btn" value="Cancel" onclick="cancelForm()">
+        </p>
+    </body>
+</html>
