@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>   
+    </head>
+    <body>
+        <h3>Contact the editorial office</h3>
+    <form method="post">
+            <p>Full Name</p>
+                <input type="text" name="full_name"  style="width: 100%;"/>
+            <p>Email</p>
+                <input type="text" name="email"  style="width: 50%;"/>
+            Send to
+            <select name="sendto">
+                    <option value="Editorial board">Editorial board</option>
+                    <option value="News Department">News Department</option>
+                    <option value="Board of Perspectives">Board of Perspectives</option>
+                    <option value="World Board">World Board</option>
+                    <option value="Business Department">Business Department</option>
+                </select>
+       <p>Title</p>
+       <input type="text" name="title" style="width: 100%;" />
+       <p>Content</p>
+       <textarea name="content" rows="5" cols="55" style="width: 100%;" ></textarea>
+       <br/>
+           <input type="button" class="btn" value="Send" onclick="sendForm()" style="background-color: red;">
+    </form>
+    </body>
+</html>
