@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Kết quả đăng nhập</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #ffffff;
+                font-family: Arial, sans-serif;
+            }
+            
+            .container {
+                width: 500px;
+                padding: 30px;
+                border: 1px solid black;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                background-color: #f9f9f9;
+            }
+            
+            .container h2 {
+                color: #333;
+                margin-top: 0;
+            }
+            
+            .result-box {
+                background-color: #e8f4f8;
+                border: 2px solid #0288d1;
+                border-radius: 5px;
+                padding: 20px;
+                margin-top: 20px;
+                text-align: left;
+            }
+            
+            .result-box p {
+                margin: 15px 0;
+                font-size: 16px;
+            }
+            
+            .result-box strong {
+                color: #0288d1;
+            }
+            
+            .back-btn {
+                margin-top: 20px;
+            }
+            
+            .back-btn a {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #0288d1;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            
+            .back-btn a:hover {
+                background-color: #0277bd;
+            }
+        </style>
+        <script>
+            function getQueryParam(param) {
+                var urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param) || "";
+            }
+            
+            function displayInfo() {
+                var username = getQueryParam("username");
+                var password = getQueryParam("password");
+                
+                document.getElementById("displayUsername").textContent = username || "Không có dữ liệu";
+                document.getElementById("displayPassword").textContent = password || "Không có dữ liệu";
+            }
+            
+            window.onload = displayInfo;
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>✓ Đăng nhập thành công</h2>
+            
+            <div class="result-box">
+                <p><strong>Username:</strong> <span id="displayUsername"></span></p>
+                <p><strong>Password:</strong> <span id="displayPassword"></span></p>
+            </div>
+            
+            <div class="back-btn">
+                <a href="login.html">← Quay lại đăng nhập</a>
+            </div>
+        </div>
+</body>
+</html>
