@@ -1,0 +1,35 @@
+function showVietnamese() {
+            id_div_vi.style.display = 'block';
+            id_div_en.style.display = 'none';   
+            id_div_fr.style.display = 'none';
+            id_div_zh.style.display = 'none';
+            id_div_ja.style.display = 'none';
+        }
+        function showEnglish() {
+            id_div_vi.style.display = 'none';
+            id_div_en.style.display = 'block';   
+            id_div_fr.style.display = 'none';
+            id_div_zh.style.display = 'none';
+            id_div_ja.style.display = 'none';
+        }
+        function showFrench() {
+            id_div_vi.style.display = 'none';
+            id_div_en.style.display = 'none';   
+            id_div_fr.style.display = 'block';
+            id_div_zh.style.display = 'none';
+            id_div_ja.style.display = 'none';
+        }
+        function showChinese() {
+            id_div_vi.style.display = 'none';
+            id_div_en.style.display = 'none';   
+            id_div_fr.style.display = 'none';
+            id_div_zh.style.display = 'block';
+            id_div_ja.style.display = 'none';
+        }
+        function showJapanese() {
+            id_div_vi.style.display = 'none';
+            id_div_en.style.display = 'none';   
+            id_div_fr.style.display = 'none';
+            id_div_zh.style.display = 'none';
+            id_div_ja.style.display = 'block';
+        }
