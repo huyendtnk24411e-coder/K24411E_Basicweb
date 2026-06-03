@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <script>
+        function solveEquation() {
+            //alert("solving equation...");
+            var a = eval(myForm.a.value);
+            var b = eval(myForm.b.value);
+            var c = eval(myForm.c.value);
+            //alert("a= " + a + "; b= " + b);
+            var result = "";
+            if (a == 0) {
+            if (b == 0) {
+                if (c == 0)
+                {
+                    result = "The equation has infinitely many solutions";
+                }
+                else
+                {
+                    result = "The equation has no solution";
+                }
+            } else {
+                result = "x = " + (-c / b);
+            }
+        }
+        else
+        {
+            var delta = b*b - 4*a*c;
+                if(delta < 0)
+                {
+                    result = "The equation has no solution";
+                }
+                else if(delta == 0)
+                {
+                    var x = -b/(2*a);
+                    result = "x1 = x2 = " + x;
+                }
+                else
+                {
+                    var x1 = (-b + Math.sqrt(delta))/(2*a);
+                    var x2 = (-b - Math.sqrt(delta))/(2*a);
+                    result = "x1 = " + x1 + "; x2 = " + x2;
+                }
+            }
+            document.getElementById("result").value = result;
+          }
+        function clearData()
+        {
+            myForm.a.value = "";
+            myForm.b.value = "";
+            myForm.c.value = "";
+            document.getElementById("result").value = "";
+        }
+        </script>
+    </head>
+    <body>
+        <form name="myForm">
+            <h2>The quadratic equation</h2>
+            <table border="1">
+                <tr>
+                    <td>a:</td>
+                    <td><input type="text" name="a"></td>
+                </tr>
+                <tr>
+                    <td>b:</td>
+                    <td><input type="text" name="b"></td>
+                </tr>
+            <tr>
+                <td>c:</td>
+                <td><input type="text" name="c"></td>
+            </tr>
+            <tr>
+                <td>Result:</td>
+                <td><input type="text" id="result" readonly></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Find solution"  onclick="solveEquation()">
+                    <input type="button" value="Clear" onclick="clearData()">
+                </td>
+            </tr>
+        </table>
+    </form>
+    </body>
+</html>

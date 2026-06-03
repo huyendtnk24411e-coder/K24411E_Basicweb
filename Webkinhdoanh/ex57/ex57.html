@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <script>
+        function tinhTien1()
+        {
+            var qty = eval(myForm.qty1.value);
+            myForm.money1.value = qty * 19.95;
+        }
+        function tinhTien2()
+        {
+            var qty = eval(myForm.qty2.value);
+            myForm.money2.value = qty * 29.95;
+        }
+        function tinhTien3()
+        {
+            var qty = eval(myForm.qty3.value);
+            myForm.money3.value = qty * 39.95;
+        }
+        function tinhTong()
+        {
+            var t1 = eval(myForm.money1.value);
+            var t2 = eval(myForm.money2.value);
+            var t3 = eval(myForm.money3.value);
+            myForm.total.value = t1 + t2 + t3;
+        }
+    </script>
+    </head>
+    <body>
+        <form name="myForm">
+            <table>
+                <tr>
+                    <th>Part Number</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Item Total</th>
+                </tr>
+                <tr>
+                    <td>C112</td>
+                    <td>Mouse</td>
+                    <td>19.95</td>
+                    <td>
+                        <input type="text" name="qty1" onchange="tinhTien1()">
+                    </td>
+                    <td>
+                        <input type="text" name="money1" readonly readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>B124</td>
+                    <td>Keyboard US</td>
+                    <td>29.95</td>
+                    <td>
+                        <input type="text" name="qty2" onchange="tinhTien2()">
+                    </td>
+                    <td>
+                        <input type="text" name="money2" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>U125</td>
+                    <td>USB KingMax</td>
+                    <td>39.95</td>
+                    <td>
+                        <input type="text" name="qty3" onchange="tinhTien3()">
+                    </td>
+                    <td>
+                        <input type="text" name="money3" readonly>
+        </td>
+    </tr>
+
+                <tr>
+                    <td >
+                        Total:
+                    </td>
+                    <td>
+                        <input type="text" name="total" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" align="right">
+                        <input type="button" value="Sum" onclick="tinhTong()">
+        </td>
+    </tr>
+            </table>
+        </form>
+    </body>
+</html>
+                  
