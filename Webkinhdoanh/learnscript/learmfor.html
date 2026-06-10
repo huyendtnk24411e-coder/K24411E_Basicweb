@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+    </head>
+    <body>
+        <h3 id="mylist"></h3>
+        <p id="myparagraph">Test 0</p>
+        <script type="text/javascript">
+        var mylist = document.getElementById("mylist");
+        for (var i = 1; i <= 100; i++) {
+            mylist.innerHTML += i + "<br/>";
+        }
+        var myparagraph = document.getElementById("myparagraph");
+        myparagraph.innerText = "Test 1";
+    </script>
+    </body>
+    
+</html>

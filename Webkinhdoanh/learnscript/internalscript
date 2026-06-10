@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tieu de trang</title>
+    <script>
+        function showVietnamese() {
+            id_div_vi.style.display = 'block';
+            id_div_en.style.display = 'none';   
+            id_div_fr.style.display = 'none';
+            id_div_zh.style.display = 'none';
+            id_div_ja.style.display = 'none';
+        }
+        function showEnglish() {
+            id_div_vi.style.display = 'none';
+            id_div_en.style.display = 'block';   
+            id_div_fr.style.display = 'none';
+            id_div_zh.style.display = 'none';
+            id_div_ja.style.display = 'none';
+        }
+        function showFrench() {
+            id_div_vi.style.display = 'none';
+            id_div_en.style.display = 'none';   
+            id_div_fr.style.display = 'block';
+            id_div_zh.style.display = 'none';
+            id_div_ja.style.display = 'none';
+        }
+        function showChinese() {
+            id_div_vi.style.display = 'none';
+            id_div_en.style.display = 'none';   
+            id_div_fr.style.display = 'none';
+            id_div_zh.style.display = 'block';
+            id_div_ja.style.display = 'none';
+        }
+        function showJapanese() {
+            id_div_vi.style.display = 'none';
+            id_div_en.style.display = 'none';   
+            id_div_fr.style.display = 'none';
+            id_div_zh.style.display = 'none';
+            id_div_ja.style.display = 'block';
+        }
+
+    </script>
+</head>
+<body>
+
+<form name="myform">
+    <h3>Select Language:</h3>
+
+    <input type="radio" name="language" id="rad1"
+    checked
+    onclick="showVietnamese()">
+        
+<label for="rad1">Vietnamese</label><br>
+
+    <input type="radio" name="language" id="rad2"
+     onclick="showEnglish()">
+    <label for="rad2">English</label><br>
+
+    <input type="radio" name="language" id="rad3"
+     onclick="showFrench()">
+    <label for="rad3">French</label><br>
+
+    <input type="radio" name="language" id="rad4"
+     onclick="showChinese()">
+    <label for="rad4">Chinese</label><br>
+
+    <input type="radio" name="language" id="rad5"
+     onclick="showJapanese()">
+    <label for="rad5">Japanese</label><br>
+
+    <div id="id_div_vi" style="display:block">
+        <h4>Xin chào</h4>
+    </div>
+
+    <div id="id_div_en" style="display:none">
+        <h4>Hello</h4>
+    </div>
+
+    <div id="id_div_fr" style="display:none">
+        <h4>Bonjour</h4>
+    </div>
+
+    <div id="id_div_zh" style="display:none">
+        <h4>你;好</h4>
+    </div>
+
+    <div id="id_div_ja" style="display:none">
+        <h4>こんにちは</h4>
+    </div>
+
+</form>
+
+</body>
+</html>

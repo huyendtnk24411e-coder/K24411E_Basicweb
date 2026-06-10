@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title> Tieu de trang </title>
+         <script>
+        function solveEquation() {
+            //alert("solving equation...");
+
+            var a = eval(myForm.a.value);
+            var b = eval(myForm.b.value);
+
+            //alert("a= " + a + "; b= " + b);
+
+            var result = "";
+
+            if (a == 0) {
+                if (b == 0) {
+                    result = "The equation has infinitely many solutions";
+                } else {
+                    result = "The equation has no solution";
+                }
+            } else {
+                result = -b / a;
+            }
+
+            // Display result way 1
+            myForm.input_result.value = result;
+
+            // Display result way 3
+            td_result.innerHTML = "<font color='blue'>" + result + "</font>";
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myForm">
+
+        <h1>First Degree Equation Solver</h1>
+
+        <table border="1">
+            <tr>
+                <td>a:</td>
+                <td>
+                    <input type="text" id="input_a" name="a">
+                </td>
+            </tr>
+
+            <tr>
+                <td>b:</td>
+                <td>
+                    <input type="text" id="input_b" name="b">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Result way 1:</td>
+                <td>
+                    <input type="text" id="input_result" name="input_result" readonly>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Result way 3:</td>
+                <td id="td_result"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="button" onclick="solveEquation()" value="Solve">
+                </td>
+            </tr>
+        </table>
+
+    </form>
+    </body>
+</html>

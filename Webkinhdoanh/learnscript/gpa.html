@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title> Tieu de trang </title>
+         <script type="text/javascript">
+        function calcGPA() {
+            var studentId = document.getElementById("studentId").value;
+
+            var qt = parseFloat(document.getElementById("qt").value);
+            var gk = parseFloat(document.getElementById("gk").value);
+            var ck = parseFloat(document.getElementById("ck").value);
+            var th = parseFloat(document.getElementById("th").value);
+
+            if (studentId == "") {
+                alert("Please input Student ID");
+                return;
+            }
+
+            if (isNaN(qt) || isNaN(gk) || isNaN(ck) || isNaN(th)) {
+                alert("Please input all scores");
+                return;
+            }
+
+            var gpa = qt * 0.2 + gk * 0.3 + ck * 0.4 + th * 0.1;
+
+            var rank;
+
+            if (gpa >= 8.5) {
+                rank = "A";
+            }
+            else if (gpa >= 7) {
+                rank = "B";
+            }
+            else if (gpa >= 5.5) {
+                rank = "C";
+            }
+            else if (gpa >= 4) {
+                rank = "D";
+            }
+            else {
+                rank = "F";
+            }
+
+            document.getElementById("result").innerHTML =
+                "Student ID: " + studentId + "<br>" +
+                "GPA: " + gpa.toFixed(2) + "<br>" +
+                "Rank: " + rank;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>GPA</h1>
+
+    Student ID:
+    <input type="text" id="studentId">
+    <br><br>
+
+    QT:
+    <input type="number" id="qt">
+    <br><br>
+
+    GK:
+    <input type="number" id="gk">
+    <br><br>
+
+    CK:
+    <input type="number" id="ck">
+    <br><br>
+
+    TH:
+    <input type="number" id="th">
+    <br><br>
+
+    <input type="button" value="Calc GPA" onclick="calcGPA()">
+
+    <br><br>
+
+    Result:
+    <br>
+    <label id="result"></label>
+</body>
+</html>

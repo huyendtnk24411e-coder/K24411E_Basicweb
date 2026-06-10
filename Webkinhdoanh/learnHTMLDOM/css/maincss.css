@@ -1,0 +1,18 @@
+tbody tr:nth-child(2n+1)
+{
+    background-color: lightblue;
+}
+tbody tr:nth-child(2n)
+{
+    background-color: lightgreen;
+}
+tbody tr:hover{
+    background-color: yellow;
+}
+table,td,tr{
+    border:1px solid black;
+}
+
+td img{
+    cursor: pointer;
+}

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <script>
+             function getUriInfo() {
+            var uri = document.getElementById("uri").value;
+            var arr = uri.split("/");
+            document.getElementById("protocol").innerHTML = arr[0];
+            document.getElementById("host").innerHTML = arr[2];
+            document.getElementById("port").innerHTML = "";
+            var fileName = arr[arr.length - 1];
+            document.getElementById("name").innerHTML = fileName;
+            var temp = fileName.split(".");
+            document.getElementById("id").innerHTML = temp[0];
+        }
+        </script>
+    </head>
+    <body>
+        <form name="myform">
+            <p>URI:</p>
+            <input type="text" name="uri" id="uri" maxlength="200" size="100"
+            value="https://www.w3schools.com/jsref/prop_win_location.asp">
+            <button type="button" onclick="getUriInfo()">Get infor</button>
+            <p>Protocol: <span id="protocol"></span></p>
+            <p>Host: <span id="host"></span></p>
+            <p>Port: <span id="port"></span></p>
+            <p>Id: <span id="id"></span></p>
+            <p>Name: <span id="name"></span></p>
+        </form>
+    </body>
+</html>

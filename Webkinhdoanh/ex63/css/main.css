@@ -1,0 +1,35 @@
+h1{
+    font-size: 32px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th{
+    background-color: blue;
+    color: white;
+}
+
+.blue{
+    background-color: blue;
+    color: white;
+}
+
+.red{
+    background-color: red;
+    color: white;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green{
+    background-color: green;
+    color: white;
+}
+
+.violet{
+    background-color: violet;
+}

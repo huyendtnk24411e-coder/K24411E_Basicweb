@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+    <script>
+        function add_node()
+        {
+            content=document.getElementById("content").value
+            position=document.getElementById("add_position").value
+
+            ul=document.getElementById("webnode")
+
+            li=document.createElement("li")
+            li.innerHTML=content
+
+            if(position=="")
+            {
+                ul.appendChild(li)
+            }
+            else
+            {
+                ul.insertBefore(li, ul.children[position])
+            }
+        }
+
+        function remove_node()
+        {
+            position=document.getElementById("remove_position").value
+
+            ul=document.getElementById("webnode")
+
+            ul.removeChild(ul.children[position])
+        }
+
+        function modify_node()
+        {
+            newContent=document.getElementById("new_content").value
+            position=document.getElementById("modify_position").value
+
+            ul=document.getElementById("webnode")
+
+            li=document.createElement("li")
+            li.innerHTML=newContent
+
+            ul.replaceChild(li, ul.children[position])
+        }
+    </script>
+</head>
+<body>
+<table >
+    <tr>
+        <td>
+            <button type="button" onclick="add_node()">Add Node</button><br>
+            <button type="button" onclick="remove_node()">Remove Node</button><br>
+            <button type="button" onclick="modify_node()">Modify Node</button>
+        </td>
+
+        <td>
+            Content
+            <input type="text" id="content"><br><br>
+
+            New Content
+            <input type="text" id="new_content">
+        </td>
+
+        <td>
+            Position
+            <input type="text" id="add_position"><br>
+
+            Position
+            <input type="text" id="remove_position"><br>
+
+            Position
+            <input type="text" id="modify_position">
+        </td>
+    </tr>
+</table>
+<p>Web Node</p>
+
+<ul id="webnode">
+    <li>Data base</li>
+    <li>Web1</li>
+    <li>Web2</li>
+</ul>

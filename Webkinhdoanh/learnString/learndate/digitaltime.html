@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+    </head>
+    <body>
+        <div style="font-size:24px; font-weight:bold;" id="my_digital_timer"></div>
+        <script>
+
+    var colors = [
+        "red",
+        "blue",
+        "green",
+        "orange",
+        "purple",
+        "brown",
+        "pink"
+    ];
+
+    var index = 0;
+            function make_my_digital_timer()
+            {
+                var my_digital_timer=document.getElementById("my_digital_timer");
+                var my_date=new Date();
+                var my_hours=my_date.getHours();
+                var my_minutes=my_date.getMinutes();
+                var my_seconds=my_date.getSeconds();
+                if(my_hours<10) my_hours="0"+ my_hours;
+                if(my_minutes<10) my_minutes="0"+my_minutes;
+                if(my_seconds<10) my_seconds="0"+my_seconds;
+                my_digital_timer.innerText=my_hours+":"+my_minutes+":"+my_seconds;
+                my_digital_timer.style.color=colors[index]; 
+                index = (index + 1) % colors.length;
+            }
+            setInterval(make_my_digital_timer,1000);
+
+        </script>
+    </body>
+</html>
