@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+         <table>
+        <thead>
+            <tr> <td><label><b>Title:</b></label></td>
+                <td colspan="2">
+    <select id="ddlTitle" onchange="showEmployees()">
+        <option value="">Loading...</option>
+    </select>
+    </td>
+</tr>
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody id="bodyEmployee">
+        </tbody>
+    </table>
+    <script>
+        loadTitles();
+    </script>
+    </body>
+</html>

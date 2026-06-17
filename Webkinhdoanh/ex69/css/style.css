@@ -1,0 +1,14 @@
+table{
+            border-collapse:collapse;
+            width:600px;
+            margin-top:10px;
+        }
+        table,tr,th,td{
+            border:1px solid gray;
+            padding:8px;
+        }
+        th{
+            background:#5d7f2c;
+            color:white;
+        }
+
