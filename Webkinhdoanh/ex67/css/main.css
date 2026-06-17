@@ -1,0 +1,26 @@
+table{
+    border-collapse: collapse;
+}
+
+table,tr,th,td{
+    border:1px solid black;
+    padding:8px;
+}
+.title-row {
+    background-color: yellow; 
+    text-align: center;
+    color: black;
+}
+th{
+    background:green;
+    color:white;
+}
+
+tbody tr:hover{
+    background-color:yellow;
+    cursor:pointer;
+}
+
+#detail{
+    margin-top:20px;
+}

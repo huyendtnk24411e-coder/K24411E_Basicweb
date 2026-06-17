@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <style>
+            @import url(css/main.css)
+        </style>
+        <script src="js/customer.js"></script>
+        <script src="js/mainjs.js"></script>
+    </head>
+    <body>
+        <table id="tblcustomers">
+            <thead>
+                <tr>
+                    <th>customer ID</th>
+                    <th>customer Name</th>
+                    <th>customer Age</th>
+                    <th>customer City</th>
+                </tr>
+            </thead>
+            <tbody id="bodycustomers">
+            </tbody>
+        </table>
+        <script>
+            load_customers(customer,document.getElementById("bodycustomers"));
+        </script>
+    </body>
+</html>
